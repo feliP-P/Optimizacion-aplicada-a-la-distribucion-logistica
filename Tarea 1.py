@@ -2,7 +2,13 @@ import cplex
 from cplex import SparsePair
 
 def definir_modelo(modelo, I, J, S, a, c, k):
-
+    # I es la cantidad de nodos
+    # J es la cantidad de productos
+    # S es el costo del centro de servicio
+    # a es la matriz de alcance (I x J)
+    # c es el vector de costos de los nodos (I)
+    # k es el vector de capacidades de los nodos (I)
+    
     #creamos las variables de decisión
     for j in range(J):
         for i in range(I):
@@ -113,4 +119,5 @@ if __name__ == "__main__":
 4 0 1 3 4
 0 0
 """
+
 #da bien :D
